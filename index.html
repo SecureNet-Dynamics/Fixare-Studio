@@ -1,302 +1,1774 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
+
 <head>
-  <meta charset="utf-8" />
-  <title>Fixare — Plain Profile</title>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FixAre - Innovative digital solutions and creative services to help your business grow. Professional services tailored to your needs.">
+    <meta name="keywords"
+        content="digital agency, web development, design, branding, marketing, creative services, FixAre">
+    <meta name="author" content="FixAre">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="light">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#0b0d10" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fixare.com">
 
-  <style>
-    :root {
-      --bg: #0b0d10;
-      --fg: #d9dde3;
-      --muted: #9aa6b2;
-      --maxw: 980px;
-      --base-font: clamp(12px, 1.25vw + 0.25rem, 17px);
-    }
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#000000">
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--fg);
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
-    }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fixare.com">
+    <meta property="og:title" content="FixAre - Innovative Digital Solutions">
+    <meta property="og:description"
+        content="Professional digital agency providing innovative solutions for your business growth.">
+    <meta property="og:image" content="https://fixare.com/og-image.jpg">
 
-    body {
-      font-family:
-        ui-monospace, SFMono-Regular, Menlo, Consolas,
-        "Liberation Mono", "DejaVu Sans Mono", monospace;
-      font-size: var(--base-font);
-      line-height: 1.5;
-    }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fixare.com">
+    <meta property="twitter:title" content="FixAre - Innovative Digital Solutions">
+    <meta property="twitter:description"
+        content="Professional digital agency providing innovative solutions for your business growth.">
+    <meta property="twitter:image" content="https://fixare.com/twitter-card.jpg">
 
-    .page {
-      max-width: min(var(--maxw), 100%);
-      margin: 0 auto;
-      padding: 28px;
-      box-sizing: border-box;
-    }
+    <!-- PWA -->
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="FixAre">
+    <meta name="apple-mobile-web-app-title" content="FixAre">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
 
-    .ascii {
-      white-space: pre;
-      overflow-x: auto;
-      overflow-y: visible;
-      -webkit-overflow-scrolling: touch;
-      word-break: normal;
-      tab-size: 4;
-    }
+    <!-- Page Title -->
+    <title>FixAre | Innovative Digital Solutions & Creative Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-geist {
+            font-family: 'Geist', sans-serif !important;
+        }
 
-    .dim { color: var(--muted); }
+        .font-space-grotesk {
+            font-family: 'Space Grotesk', sans-serif !important;
+        }
 
-    @media (max-width: 720px) {
-      .page { padding: 20px; }
-      body { font-size: clamp(11px, 3.2vw, 16px); }
-    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
-    @media (max-width: 420px) {
-      .page { padding: 16px; }
-      body { font-size: clamp(10px, 3.6vw, 15px); }
-    }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    @media (min-resolution: 2dppx) {
-      body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    }
-  </style>
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-delay-1 {
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        .animate-fade-in-delay-2 {
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+        .animate-fade-in-delay-3 {
+            animation: fadeIn 0.8s ease-out 0.6s both;
+        }
+
+        .animate-fade-in-delay-4 {
+            animation: fadeIn 0.8s ease-out 0.8s both;
+        }
+    </style>
 </head>
-<body>
-<div class="page ascii">
-  
-███████╗██╗██╗  ██╗ █████╗ ██████╗ ███████╗
-██╔════╝██║╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝
-█████╗  ██║ ╚███╔╝ ███████║██████╔╝█████╗  
-██╔══╝  ██║ ██╔██╗ ██╔══██║██╔══██╗██╔══╝  
-██║     ██║██╔╝ ██╗██║  ██║██║  ██║███████╗
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
-              F I X A R E
 
-"Transform what takes months into days, and what takes days into 24 hours."
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay-1 {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 0.8s ease-out 0.4s both;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fadeIn 0.8s ease-out 0.6s both;
+    }
+
+    .animate-fade-in-delay-4 {
+        animation: fadeIn 0.8s ease-out 0.8s both;
+    }
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+<style id="all-fonts-style-font-geist">
+    .font-geist {
+        font-family: 'Geist', sans-serif !important;
+    }
+</style>
+</head>
+
+<body class="min-h-full antialiased selection:bg-black selection:text-white text-white bg-gray-950"
+    style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';">
+
+    <div class="aura-background-component top-0 w-full -z-10 h-[780px] absolute">
+        <div data-us-project="vRUeei6AVOtWgmHT28mN" class="absolute top-0 left-0 -z-10 w-full h-full"></div>
+        <script type="text/javascript">
+            !function () { if (!window.UnicornStudio) { window.UnicornStudio = { isInitialized: !1 }; var i = document.createElement("script"); i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js", i.onload = function () { window.UnicornStudio.isInitialized || (UnicornStudio.init(), window.UnicornStudio.isInitialized = !0) }, (document.head || document.body).appendChild(i) } }();
+        </script>
+    </div>
+
+    <!-- Ambient BG -->
+    <div class="absolute -z-10 inset-0 overflow-hidden">
+        <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 h-[900px] w-[1200px] rounded-full blur-3xl opacity-20"
+            style="background: radial-gradient(1200px 600px at 50% 30%, #111827 10%, #9CA3AF 40%, transparent 70%);">
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl border-b bg-black/70 border-white/5">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="h-16 flex items-center justify-between gap-4">
+                <!-- Brand -->
+                <a href="#" class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center">
+                        <img src="fixare.png" alt="FixAre Logo" class="w-full h-full object-contain">
+                    </div>
+                    <span
+                        class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">FixAre</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#services"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors hover:bg-white/5 px-3 py-2 rounded-lg">Services</a>
+                    <a href="#solutions"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors hover:bg-white/5 px-3 py-2 rounded-lg">Solutions</a>
+                    <a href="#work"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors hover:bg-white/5 px-3 py-2 rounded-lg">Our
+                        Work</a>
+                    <a href="#about"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors hover:bg-white/5 px-3 py-2 rounded-lg">About</a>
+                    <a href="#contact"
+                        class="text-sm font-medium text-white/70 hover:text-white transition-colors hover:bg-white/5 px-3 py-2 rounded-lg">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contact"
+                        class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-lg transition-all hover:shadow-lg hover:shadow-blue-500/20">
+                        Start Project
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button"
+                    class="md:hidden p-2 -mr-2 text-white/70 hover:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-black/95 backdrop-blur-lg">
+            <div class="px-6 py-6 space-y-6">
+                <div class="space-y-4">
+                    <a href="#services"
+                        class="block py-3 px-4 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Services</a>
+                    <a href="#solutions"
+                        class="block py-3 px-4 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Solutions</a>
+                    <a href="#work"
+                        class="block py-3 px-4 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Our
+                        Work</a>
+                    <a href="#about"
+                        class="block py-3 px-4 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors">About</a>
+                    <a href="#contact"
+                        class="block py-3 px-4 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Contact</a>
+                </div>
+                <a href="#contact"
+                    class="block w-full text-center py-3 px-4 text-base font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-lg transition-all hover:shadow-lg hover:shadow-blue-500/20">
+                    Start Project
+                </a>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden border-t backdrop-blur border-white/5
+            bg-black/80">
+            <div class="max-w-7xl mx-auto px-6 sm:px-8 py-4">
+                <nav class="grid grid-cols-2 gap-3">
+                    <a class="text-sm px-4 py-3 rounded-xl border transition border-white/5 hover:bg-white/5
+                        text-white/70 hover:text-white font-geist" href="#cameras">Cameras</a>
+                    <a class="text-sm px-4 py-3 rounded-xl border transition border-white/5 hover:bg-white/5
+                        text-white/70 hover:text-white font-geist" href="#lenses">Lenses</a>
+                    <a class="text-sm px-4 py-3 rounded-xl border transition border-white/5 hover:bg-white/5
+                        text-white/70 hover:text-white font-geist" href="#accessories">Accessories</a>
+                    <a class="text-sm px-4 py-3 rounded-xl border transition border-white/5 hover:bg-white/5
+                        text-white/70 hover:text-white font-geist" href="#lighting">Lighting</a>
+                    <a class="text-sm px-4 py-3 rounded-xl border transition border-rose-800 text-rose-400
+                        hover:bg-rose-950 font-geist" href="#deals">Deals</a>
+                    <a class="text-sm px-4 py-3 rounded-xl border transition border-white/5 hover:bg-white/5
+                        text-white/70 hover:text-white font-geist" href="#support">Support</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
 
 
-──────────────────────────────────────────────────────────────────────────────
-ABOUT FIXARE
-──────────────────────────────────────────────────────────────────────────────
-Fixare is a creative-corporate, international-first partner for businesses that
-want measurable growth, robust security, and operational calm. We design and
-operate the digital backbone of modern companies: the websites customers trust,
-the systems teams rely on, and the automations that keep the whole machine
-moving while you sleep. We blend engineering discipline with brand-sensitive
-design, and we do it with speed, quality, and automation as non-negotiables.
+    <section class="sm:px-8 max-w-7xl mt-4 md:mt-8 mr-auto mb-24 ml-auto pr-6 pl-6">
+        <div class="">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 animate-fade-in-delay-3 w-fit mb-2">
+                        <div class="flex gap-2 bg-white/5 border-white/5 border rounded-full pt-1 pr-3 pb-1 pl-3
+                            backdrop-blur items-center">
 
-We don’t sell hours; we deliver outcomes. Our specialty is rapid transformation:
-audit, architect, implement, and automate—often within a 24-hour sprint that
-unblocks revenue, tightens security, and sets the stage for compounding ROI.
+                            <span class="text-xs text-white/70 font-geist">Accepting 2 Projects This Month</span>
+                        </div>
 
 
-   .-.
-  (   )            ASCII SKETCH: ROCKET = SPEED
-   '-'      _..._          ______
-          .'     '.       / ____/  Fixare Promise: fast, precise, reliable
-         /  .- -.  \     / /_       No shortcuts. No fluff. Only impact.
-        |  (  ^  )  |   / __/       We ship, measure, and iterate.
-         \  `- -'  /   / /____
-          '._   _.'   /______/
-             '-'
+                    </div>
+                    <h1 class="sm:text-7xl lg:text-8xl leading-[1.02] animate-fade-in text-5xl font-medium
+                        text-white tracking-tighter font-geist">We Build Systems,</h1>
+                    <p class="sm:text-2xl leading-relaxed text-xl mt-6 text-white/60 animate-fade-in-delay-1
+                        tracking-tighter font-geist font-medium">FixAre — your remote creative-tech team, crafting
+                        digital experiences, custom tools, and smart automation to scale your business.</p>
+
+                    <div class="flex flex-wrap gap-4 mt-10 items-center animate-fade-in-delay-2">
+                        <button class="group relative inline-flex min-w-[120px] cursor-pointer transition-all
+                            duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px]
+                            hover:text-white overflow-hidden font-semibold text-white/70 tracking-tight bg-white/5
+                            border-white/10 border rounded-xl pt-[12px] pr-[20px] pb-[12px] pl-[20px]
+                            shadow-[0_2.8px_2.2px_rgba(0,0,0,0.3),_0_6.7px_5.3px_rgba(0,0,0,0.35),_0_12.5px_10px_rgba(0,0,0,0.4)]
+                            items-center justify-center">
+                            <!-- Original text (slides down on hover) -->
+                            <span class="relative z-10 font-medium transition-all duration-500 ease-out
+                                group-hover:transform group-hover:translate-y-8 group-hover:opacity-0
+                                group-hover:blur-md rounded-xl font-geist">Shop cameras</span>
+
+                            <!-- Clone text (slides in from top on hover) -->
+                            <span class="absolute inset-0 z-10 flex items-center justify-center transition-all
+                                duration-300 ease-in-out transform -translate-y-8ranslate-y-0
+                                group-hover:opacity-100 group-hover:blur-none font-medium group-hover:t opacity-0 blur-md rounded-xl
+                                font-geist">Shop cameras</span>
+
+                            <!-- replaces the old ::before underline -->
+                            <span aria-hidden="true" class="absolute bottom-0 left-1/2 h-[1px] w-[70%]
+                                -translate-x-1/2 transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)]
+                                group-hover:opacity-80 bg-gradient-to-r from-transparent via-white/40 to-transparent
+                                blur-[2px] rounded-xl"></span>
+
+                            <!-- bottom light gradient on hover -->
+                            <span aria-hidden="true" class="absolute bottom-0 left-0 right-0 h-[100%]
+                                group-hover:opacity-60 transition-all duration-[1000ms]
+                                ease-[cubic-bezier(0.15,0.83,0.66,1)] pointer-events-none bg-gradient-to-t from-white/10
+                                via-white/5 to-transparent rounded-xl"></span>
+                        </button>
+                        <a href="#featured" class="inline-flex items-center gap-2 text-sm transition
+                            text-white/70 hover:text-white font-geist">
+                            View featured gear
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="flex gap-2 text-white/40 mt-6 items-center">
+                        <span class="text-base font-geist">+</span>
+                        <div class="h-px flex-1 bg-white/10"></div>
+                        <span class="text-base font-geist">+</span>
+                    </div>
+
+                </div>
 
 
-──────────────────────────────────────────────────────────────────────────────
-WHAT WE DO (END-TO-END)
-──────────────────────────────────────────────────────────────────────────────
-We plan, build, secure, and automate. From the first line of strategy to the
-last line of code, Fixare owns the outcome: growth that is defensible, brand
-experiences that convert, infrastructure that never blinks, and dashboards that
-make tomorrow’s decision obvious today.
+            </div>
+        </div>
+    </section>
 
-• Strategy → Research, competitive mapping, positioning, growth levers
-• Build → Web apps, storefronts, internal tools, data pipelines
-• Secure → Hardening, monitoring, incident readiness, backups, recovery
-• Automate → Bots, workflows, AI assistants, reporting, alerting
-• Support → SLA-based care, performance tuning, lifecycle upgrades
+    <!-- Brand Section -->
+    <div class="w-full pt-16 pr-6 pb-16 pl-6">
+        <div class="text-center">
+            <p class="uppercase text-sm font-medium text-zinc-400 tracking-wide font-geist">Trusted by companies
+                and creators worldwide</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 mt-6 items-center
+            justify-items-center">
+            <a href="#" class="inline-flex items-center justify-center h-[100px] w-[150px] bg-center
+                mix-blend-screen
+                bg-[url(https://zuhd.store/cdn/shop/files/header-logo_e71c584d-b161-4ce0-9047-3e6d30939527.svg?v=1705422479&width=60)]
+                bg-cover rounded"></a><a href="#" class="inline-flex items-center justify-center
+                h-[100px] w-[150px] bg-center mix-blend-screen
+                bg-[url(https://vceela.com/web/image/777-0f7b996d/Vceela_Original_Logo-removebg-preview.webp)]
+                bg-cover rounded"></a><a href="#" class="inline-flex items-center justify-center
+                h-[100px] w-[150px] bg-center mix-blend-screen
+                bg-[url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3eCWIlS0Jlm871_aYFVixkeGbav9dyb_7x2UR_y-NyT6-h1M3tXV8oQsrWJh8P5nd9Vo&usqp=CAU)]
+                bg-cover rounded"></a><a href="#" class="inline-flex items-center justify-center
+                h-[100px] w-[150px] bg-center mix-blend-screen
+                bg-[url(data:image/png;base64,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)]
+                bg-cover rounded"></a><a href="#" class="inline-flex items-center justify-center
+                h-[100px] w-[150px] bg-center mix-blend-screen
+                bg-[url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_38KorUBkSHOC6_UvoJ03U4tM9ZQEs-8HHw&s)]
+                bg-cover rounded"></a>
 
+            <a href="#" class="inline-flex items-center justify-center h-[100px] w-[150px] bg-center
+                mix-blend-screen
+                bg-[url(https://doutymarketplace.com/wp-content/uploads/2025/05/douty.png)]
+                bg-cover rounded"></a>
+        </div>
+    </div>
+    <div class="flex gap-2 text-white/40 mt-6 mr-auto mb-24 ml-auto pr-6 pl-6 items-center">
+        <span class="text-base font-geist">+</span>
+        <div class="h-px flex-1 bg-white/10"></div>
+        <span class="text-base font-geist">+</span>
+    </div>
+    <div class="w-full max-w-7xl mt-6 mr-auto mb-24 ml-auto pt-6 pr-6 pb-6 pl-6">
+        <div class="relative">
+            <div class="text-center">
+                <h2 class="text-5xl sm:text-7xl lg:text-8xl leading-none text-white/90 tracking-tight uppercase
+                    font-geist font-medium">BUILD</h2>
+                <h2 class="text-5xl sm:text-7xl lg:text-8xl leading-none text-white/90 tracking-tight uppercase
+                    mt-1 font-geist font-medium">WHAT MATTERS</h2>
 
-      ___________________________           ___________________________
-     |   O O O O O O O O O O   |         |   █████  SECURITY SHIELD   |
-     |  [  SERVER RACKS   ]    |         |   ▒▒▒▒▒  LAYERS + CONTROLS |
-     |__________________________|         |____________________________|
-      ASCII SKETCH: SERVERS                ASCII SKETCH: SHIELD
+                <div class="flex gap-2 text-white/40 mt-6 items-center">
+                    <span class="text-base font-geist">+</span>
+                    <div class="h-px flex-1 bg-white/10"></div>
+                    <span class="text-base font-geist">+</span>
+                </div>
 
+                <p class="mt-6 text-xl sm:text-2xl text-white/70 tracking-tight max-w-3xl mx-auto font-geist
+                    font-medium">High-impact systems for teams that move fast.
+                    From design to automation — Fixare turns vision into velocity.</p>
+            </div>
 
-──────────────────────────────────────────────────────────────────────────────
-SERVICE AREAS (IN DETAIL)
-──────────────────────────────────────────────────────────────────────────────
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                    <img src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/c3c39a55-81b6-4f82-8226-b3f5996357fc_800w.jpg"
+                        alt="Editorial portrait in cool tones" class="w-full h-72 sm:h-80 lg:h-[360px]
+                        object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                    <img src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/10a964a6-0dd5-433d-81b4-77149d138bdf_800w.jpg"
+                        alt="Motion-led dance silhouette" class="w-full h-72 sm:h-80 lg:h-[360px]
+                        object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                    <img src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/53b394ef-9752-457f-aea2-87c90f69e56b_800w.jpg"
+                        alt="Purple cinematic lighting study" class="w-full h-72 sm:h-80 lg:h-[360px]
+                        object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                    <img src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/a0d7cc76-a8ea-4112-a0e6-f3eb9be4d5d1_800w.jpg"
+                        alt="Fashion portrait with sunglasses" class="w-full h-72 sm:h-80 lg:h-[360px]
+                        object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
 
-WEB DEVELOPMENT & ENGINEERING
-We craft fast, resilient, and conversion-focused web properties and platforms.
-• Business sites, landing pages, portals, blogs, knowledge bases
-• Web apps, dashboards, partner portals, client extranets
-• SEO-ready architecture, schema, performance budgets, accessibility
-• API design, integrations, auth, payments, subscriptions
-• CI/CD pipelines, testing harnesses, release automation
-
-SERVER MAINTENANCE, CLOUD & DEVOPS
-Uptime, security, and cost sanity across clouds and on-prem.
-• Provisioning, hardening, patching, observability, scaling policies
-• Docker/Kubernetes, reverse proxies, CDN, WAF, caching layers
-• Backups, disaster recovery plans, runbooks, SRE practices
-• Cost optimization and right-sizing; zero-downtime deployments
-
-GRAPHICS DESIGN & UI/UX
-Design that looks sharp and sells smarter.
-• Brand systems: logos, typography, color models, usage rules, voice
-• Product design: flows, wireframes, interactive prototypes, design tokens
-• Marketing design: campaigns, ads, decks, sales collateral, packaging
-• Conversion optimization: friction audits, heatmap insights, A/B roadmaps
-
-CYBERSECURITY & PROTECTION
-Security woven into architecture—not bolted on after.
-• Threat modeling, secure SDLC, code & dependency scanning
-• Network and app hardening, secrets management, key rotation
-• Pen-test preparation, incident response playbooks, tabletop exercises
-• MFA everywhere, least-privilege access, audit trails, compliance guidance
-
-AUTOMATION, INTEGRATIONS & AI ASSISTANTS
-Give teams time back and scale precision.
-• Process automation with n8n/Make/Zapier and custom micro-services
-• CRM, ERP, ticketing, accounting, and messaging integrations
-• Social posting bots, lead funnels, enrichment, scoring, handoff flows
-• AI copilots for support, ops, content QA, and knowledge retrieval
-• Alerts, SLAs, and reporting dashboards wired to business KPIs
-
-CUSTOM SOFTWARE & DATA PLATFORMS
-Tools that fit your workflow—not the other way around.
-• Internal CRMs, inventory & order systems, finance trackers
-• Data ingestion, transformation, warehousing, semantic layers
-• Role-based portals, audit-ready logs, fine-grained permissions
-• Shopify/WooCommerce apps, middleware, headless storefronts
-
-GROWTH ENGINEERING & ANALYTICS
-Make every decision with evidence.
-• Analytics implementation, governance, event catalogs
-• Attribution clarity, cohort views, LTV/CAC, funnel health
-• Experiment design, rollouts, feature flags, iteration cadence
-
-
-──────────────────────────────────────────────────────────────────────────────
-THE 24-HOUR GROWTH SPRINT
-──────────────────────────────────────────────────────────────────────────────
-Day-zero momentum for leaders who can’t wait.
-
-Phase 01 — Diagnose: rapid audit of site, stack, security, analytics, funnel.
-Phase 02 — Decide: rank fixes by impact × effort; lock scope; define metrics.
-Phase 03 — Deliver: ship the highest-leverage improvements same-day.
-Phase 04 — Document: runbook, rollback, monitoring, and next-step roadmap.
-Outcome — A visible lift (speed, stability, conversions, or security posture)
-within 24 hours, plus a clear 30-day plan for compounding results.
-
-
-      ╔═══════════════════════════════════════════════════════════════╗
-      ║   FLOW MAP (ASCII)                                            ║
-      ║   [Discover]→[Design]→[Build]→[Secure]→[Automate]→[Support]   ║
-      ║     |___________Evidence & Metrics at Every Transition________|║
-      ╚═══════════════════════════════════════════════════════════════╝
-
-
-──────────────────────────────────────────────────────────────────────────────
-MISSION
-──────────────────────────────────────────────────────────────────────────────
-Fixare accelerates business growth by uniting design precision, engineering
-rigor, and intelligent automation. Our mission is to deliver outcomes in days
-—sometimes in 24 hours—that compound into durable advantages: faster sites,
-tighter security, clearer data, calmer operations, and higher ROI.
-
-──────────────────────────────────────────────────────────────────────────────
-VISION
-──────────────────────────────────────────────────────────────────────────────
-We envision a world where organizations operate effortlessly on resilient,
-secure, and automated digital foundations. Fixare will be the global standard
-for creative-technical partnerships: the team leaders call when they need both
-taste and technical depth—delivered at speed and at scale.
+    <div class="flex gap-2 text-white/40 max-w-7xl mt-6 mr-auto mb-24 ml-auto items-center">
+        <span class="text-base font-geist">+</span>
+        <div class="h-px flex-1 bg-white/10"></div>
+        <span class="text-base font-geist">+</span>
+    </div>
+    <section class="sm:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pb-6 border-b
+            border-white/5">
+            <div class="flex items-center gap-3">
+                <h2 class="text-4xl sm:text-5xl text-white tracking-tighter font-geist font-medium">Featured
+                    Products</h2>
+                <span class="text-lg text-white/50 font-geist">Pro Choice</span>
+            </div>
+            <div class="flex items-center gap-3">
 
 
-──────────────────────────────────────────────────────────────────────────────
-CORE VALUES
-──────────────────────────────────────────────────────────────────────────────
-Quality Without Compromise  |  Speed With Precision  |  Security First
-Automation as Leverage      |  Evidence over Opinions |  Ownership End-to-End
-Clarity & Calm              |  Global Standards       |  Quiet Authority
+                <div class="hidden sm:flex items-center gap-2">
+                    <span class="inline-flex items-center gap-2 px-4 h-10 rounded-xl border text-sm border-white/5
+                        bg-black text-white/70 font-geist">Softwares</span>
+                    <span class="inline-flex items-center gap-2 px-4 h-10 rounded-xl border text-sm border-white/5
+                        bg-black text-white/70 font-geist">Costom Solutions</span>
+                    <span class="inline-flex items-center gap-2 px-4 h-10 rounded-xl border text-sm border-white/5
+                        bg-black text-white/70 font-geist">Accessories</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Product Grid -->
+    <section class="sm:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
+        <div class="py-12 sm:py-16">
+            <!-- Featured Product -->
+            <article class="mb-12 rounded-3xl overflow-hidden border hover:shadow-xl transition-all duration-300
+                bg-black border-white/5">
+                <div class="grid lg:grid-cols-2 gap-0">
+                    <div class="relative">
+                        <img src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/34fa9afc-3d27-4ab4-b6b5-cd6e89cab95b_1600w.jpg"
+                            alt="Canon EOS R5" class="w-full h-[300px] lg:h-[400px] object-cover">
+                        <div class="absolute top-4 left-4 inline-flex items-center px-3 py-1.5 rounded-full
+                            bg-emerald-500/10 text-xs border border-emerald-500/20 text-emerald-300 font-geist">
+                            Marketer's Choice</div>
+                    </div>
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <h3 class="lg:text-3xl text-2xl mb-4 text-white tracking-tighter font-geist font-medium">
+                            OutReeach Suite</h3>
+                        <p class="text-lg mb-6 text-white/60 font-geist">OutReach Suite is Consiting of MailFusion,
+                            InstaConnect Pro, and Whisper Pro. Tools Design
+                            to Out Reach on Instagram, WhatsApp and Email.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <span class="text-2xl text-white tracking-tighter font-geist
+                                    font-medium">$3,899</span>
+                                <span class="text-lg text-white/50 line-through font-geist">$4,999</span>
+                            </div>
+                            <button class="inline-flex items-center gap-2 h-12 px-6 rounded-xl transition bg-white
+                                text-black hover:bg-white/90 font-geist">
+                                More Details
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-──────────────────────────────────────────────────────────────────────────────
-WHY CHOOSE FIXARE
-──────────────────────────────────────────────────────────────────────────────
-Because time is your scarcest resource and quality is your strongest moat.
-Fixare closes the gap between intention and implementation. We learn your
-business model, identify bottlenecks, and build the shortest, safest path to
-impact. We integrate design, code, security, data, and automation so leaders
-can make decisions with confidence and teams can ship without friction.
+            <!-- Product Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <article class="group rounded-3xl overflow-hidden border hover:shadow-xl transition-all
+                    duration-300 bg-black border-white/5">
+                    <div class="relative">
+                        <img src="/Assets/MailFusion.jpeg" alt="MailFusion ScrecenShot"
+                            class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 inline-flex items-center px-3 py-1.5 rounded-full text-xs
+                            bg-rose-500/10 border border-rose-500/20 text-rose-300 font-geist">
+                            Hot Deal</div>
+                        <button class="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center
+                            rounded-full border transition bg-black/80 border-white/5 text-white/70 hover:text-white
+                            hover:bg-black" aria-label="Add to wishlist">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5
+                                    2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-white tracking-tighter font-geist font-medium">MailFusion</h3>
+                        <p class="text-base mb-4 text-white/60 font-geist">MailFusion is a fast, privacy-centric email
+                            outreach solution that lets you craft and send personalized messages at scale. It's ideal
+                            for:
 
-• Outcome-first: every engagement tied to verifiable metrics
-• Secure by design: least-privilege, encrypted everywhere, monitored always
-• Integrated stack: one partner across web, infra, automation, analytics
-• Corporate-grade practices: runbooks, reviews, SLAs, retrospectives
-• Measurable lift, fast: real improvements within the first 24 hours
+                            Campaigns,
+                            Follow-ups,
+                            Bulk communication
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-semibold text-white font-geist">$2,499</span>
+                            <button class="inline-flex items-center gap-2 h-10 px-4 rounded-xl border transition
+                                border-white/5 bg-black text-white/70 hover:bg-white/5 font-geist">
+                                More Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
 
+                <!-- Product 2 -->
+                <article class="group rounded-3xl overflow-hidden border hover:shadow-xl transition-all
+                    duration-300 bg-black border-white/5">
+                    <div class="relative">
+                        <img src="/Assets/InstaConnectPro.png" alt="Canon RF 24-70mm" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center
+                            rounded-full border transition bg-black/80 border-white/5 text-white/70 hover:text-white
+                            hover:bg-black" aria-label="Add to wishlist">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5
+                                    2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-white tracking-tighter font-geist font-medium">InstaConnect Pro
+                        </h3>
+                        <p class="text-base mb-4 text-white/60 font-geist">InstaConnect Pro is a fast, privacy-centric
+                            Instagram DM outreach tool that lets you:
 
-         _____________                     _____________
-        /   CLOUD     \                   /   DASHBOARD  \
-       /  SITES  APIS  \                 /  KPIs  ALERTS  \
-      |  CDN  WAF  CI  |               |  LTV  CAC  LCP   |
-       \  LOGS METRICS /                 \  NPS  UPTIME  /
-        \_____________/                   \_____________/
-            ASCII CLOUD                        ASCII KPIs
+                            Send personalized DMs at scale,
+                            Automate follow-ups and campaigns,
+                            Manage outreach efficiently and safely
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-semibold text-white font-geist">$2,299</span>
+                            <button class="inline-flex items-center gap-2 h-10 px-4 rounded-xl border transition
+                                border-white/5 bg-black text-white/70 hover:bg-white/5 font-geist">
+                                More Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
 
+                <!-- Product 3 -->
+                <article class="group rounded-3xl overflow-hidden border hover:shadow-xl transition-all
+                    duration-300 bg-black border-white/5">
+                    <div class="relative">
+                        <img src="/Assets/whisperpro.png" alt="DJI Ronin-S" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center
+                            rounded-full border transition bg-black/80 border-white/5 text-white/70 hover:text-white
+                            hover:bg-black" aria-label="Add to wishlist">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5
+                                    2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-white tracking-tighter font-geist font-medium">WhisperPro</h3>
+                        <p class="text-base mb-4 text-white/60 font-geist">WhisperPro is a fast, privacy-centric
+                            WhatsApp messaging tool that lets you:
 
-──────────────────────────────────────────────────────────────────────────────
-PROCESS, GOVERNANCE & SUPPORT
-──────────────────────────────────────────────────────────────────────────────
-Discovery → Scope → Delivery → Verification → Handover → Support.
-We maintain change logs, versioned configs, and rollback paths. Monitoring and
-alerts are wired from day one. We write the docs your future team will thank
-you for. Support ranges from office-hours to 24/7 SLA with incident response.
+                            Send personalized messages at scale
+                            Automate follow-ups and campaigns
+                            Manage outreach efficiently and safely
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-semibold text-white font-geist">$699</span>
+                            <button class="inline-flex items-center gap-2 h-10 px-4 rounded-xl border transition
+                                border-white/5 bg-black text-white/70 hover:bg-white/5 font-geist">
+                                More Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
 
-Security governance includes access inventories, credential rotation schedules,
-audit trails, backup verification, and recovery drills. We align work to your
-risk profile and regulatory context where relevant.
+                <!-- Product 4 -->
+                <article class="group rounded-3xl overflow-hidden border hover:shadow-xl transition-all
+                    duration-300 bg-black border-white/5">
+                    <div class="relative">
+                        <img src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/dd7739ca-a486-4c3c-9a56-65ed72d536a6_800w.jpg"
+                            alt="Nikon Z9" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4 inline-flex items-center px-3 py-1.5 rounded-full
+                            bg-emerald-500/10 text-xs border border-emerald-500/20 text-emerald-300 font-geist">New
+                            Arrival</div>
+                        <button class="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center
+                            rounded-full border transition bg-black/80 border-white/5 text-white/70 hover:text-white
+                            hover:bg-black" aria-label="Add to wishlist">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5
+                                    2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-white tracking-tighter font-geist font-medium">Nikon Z9
+                            Mirrorless Camera</h3>
+                        <p class="text-base mb-4 text-white/60 font-geist">45.7MP
+                            full-frame flagship with 8K video.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-semibold text-white font-geist">$5,499</span>
+                            <button class="inline-flex items-center gap-2 h-10 px-4 rounded-xl border transition
+                                border-white/5 bg-black text-white/70 hover:bg-white/5 font-geist">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </article>
 
+                <!-- Product 5 -->
+                <article class="group rounded-3xl overflow-hidden border hover:shadow-xl transition-all
+                    duration-300 bg-black border-white/5">
+                    <div class="relative">
+                        <img src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/cbb7d5a5-338c-4742-aa67-75c898a97678_800w.jpg"
+                            alt="Godox Lighting Kit" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center
+                            rounded-full border transition bg-black/80 border-white/5 text-white/70 hover:text-white
+                            hover:bg-black" aria-label="Add to wishlist">
+                            <svg xmlns=" http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5
+                                    2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-white tracking-tighter font-geist font-medium">Godox
+                            Studio Lighting Kit</h3>
+                        <p class="text-base mb-4 text-white/60 font-geist">Complete 3-light
+                            studio setup with stands.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-semibold text-white font-geist">$899</span>
+                            <button class="inline-flex items-center gap-2 h-10 px-4 rounded-xl border transition
+                                border-white/5 bg-black text-white/70 hover:bg-white/5 font-geist">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </article>
 
-──────────────────────────────────────────────────────────────────────────────
-TOOLING & COMPATIBILITY (NON-EXHAUSTIVE)
-──────────────────────────────────────────────────────────────────────────────
-Clouds: AWS, GCP, Azure, modern hosts and CDNs
-Infra: Docker, Kubernetes (where it fits), reverse proxies, queues
-Data: Postgres, MySQL, Redis, object storage, warehouses
-Stacks: Node, Python, Go, TypeScript, modern front-ends
-Ops: CI/CD, IaC, observability suites, incident tooling
-Automation: n8n, Make, Zapier, custom micro-services, webhooks
-Commerce: Shopify, WooCommerce, headless builds, custom apps
+                <!-- Product 6 -->
+                <article class="group rounded-3xl overflow-hidden border hover:shadow-xl transition-all
+                    duration-300 bg-black border-white/5">
+                    <div class="relative">
+                        <img src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/0d6402f2-db30-4d17-8b51-47ee62c763f1_800w.jpg"
+                            alt="Audio Equipment" class="w-full h-64 object-cover">
+                        <button class="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center
+                            rounded-full border transition bg-black/80 border-white/5 text-white/70 hover:text-white
+                            hover:bg-black" aria-label="Add to wishlist">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5
+                                    2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-white tracking-tighter font-geist font-medium">Rode Wireless GO II
+                        </h3>
+                        <p class="text-base mb-4 text-white/60 font-geist">Dual-channel
+                            wireless microphone system.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl font-semibold text-white font-geist">$299</span>
+                            <button class="inline-flex items-center gap-2 h-10 px-4 rounded-xl border transition
+                                border-white/5 bg-black text-white/70 hover:bg-white/5 font-geist">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
+            <!-- Load More -->
+            <div class="mt-12 text-center">
+                <button class="inline-flex items-center gap-2 h-12 px-6 rounded-xl border transition border-white/5
+                    bg-black text-white/70 hover:bg-white/5 font-geist">
+                    Load more products
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-4 h-4">
+                        <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
 
-──────────────────────────────────────────────────────────────────────────────
-ETHOS
-──────────────────────────────────────────────────────────────────────────────
-We are calm in execution and fierce about standards. We respect your brand,
-your customers, your time, and your security. We favor boring-reliable over
-flashy-fragile. We communicate in plain language and ship in tight loops. We
-leave everything better than we found it.
+    <!-- Expert Consultation Section -->
+    <div class="flex gap-2 text-white/40 max-w-7xl mt-6 mr-auto ml-auto items-center">
+        <span class="text-base font-geist">+</span>
+        <div class="h-px flex-1 bg-white/10"></div>
+        <span class="text-base font-geist">+</span>
+    </div>
+    <section class="sm:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
+        <div class="py-12 sm:py-16">
+            <div class="text-sm text-white/40 font-geist">(Recognition)</div>
 
+            <h2 class="mt-4 text-5xl sm:text-7xl lg:text-8xl leading-none text-white tracking-tight font-geist
+                font-medium">AWARD WINNING</h2>
+            <h2 class="text-5xl sm:text-7xl lg:text-8xl leading-none text-white tracking-tight font-geist
+                font-medium">EXCELLENCE</h2>
 
-──────────────────────────────────────────────────────────────────────────────
-CLOSING
-──────────────────────────────────────────────────────────────────────────────
-Fixare is the partner for leaders who need quality, speed, and automation—
-together. If your roadmap is ambitious and your timeline is real, we are ready
-to turn intent into impact and complexity into momentum.
+            <div class="mt-6 flex items-center gap-3 text-white/30">
+                <span class="text-base font-geist">+</span>
+                <div class="h-px flex-1 bg-white/10"></div>
+                <span class="text-base font-geist">+</span>
+            </div>
 
-"Transform your business in 24 hours. Then keep compounding."
+            <div class="mt-8 grid lg:grid-cols-12 gap-8 items-start">
+                <div class="hidden lg:block lg:col-span-5"></div>
+                <div class="lg:col-span-7">
+                    <p class="text-xl sm:text-2xl text-white/70 tracking-tight font-geist font-medium">
+                        Our commitment to professional photography excellence has been recognized by
+                        leading industry organizations and publications worldwide.</p>
 
-</div>
+                    <div class="mt-8 border-t border-white/10 divide-y divide-white/10">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
+                            <div class="text-base text-white/80 font-geist">Camera Retailer Awards</div>
+                            <div class="text-base text-white/80 font-geist">Best Online Camera Store</div>
+                            <div class="text-base text-white/60 text-right font-geist">(2024)</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
+                            <div class="text-base text-white/80 font-geist">Professional Photo Magazine</div>
+                            <div class="text-base text-white/80 font-geist">Dealer of the Year</div>
+                            <div class="text-base text-white/60 text-right font-geist">(2024)</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
+                            <div class="text-base text-white/80 font-geist">Industry Excellence Awards</div>
+                            <div class="text-base text-white/80 font-geist">Customer Service Excellence</div>
+                            <div class="text-base text-white/60 text-right font-geist">(2024)</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
+                            <div class="text-base text-white/80 font-geist">Digital Photography Review</div>
+                            <div class="text-base text-white/80 font-geist">Trusted Gear Partner</div>
+                            <div class="text-base text-white/60 text-right font-geist">(2024)</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
+                            <div class="text-base text-white/80 font-geist">Imaging Trade Association</div>
+                            <div class="text-base text-white/80 font-geist">Innovation in Retail</div>
+                            <div class="text-base text-white/60 text-right font-geist">(2023)</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
+                            <div class="text-base text-white/80 font-geist">Photo Industry Awards</div>
+                            <div class="text-base text-white/80 font-geist">Best Equipment Selection</div>
+                            <div class="text-base text-white/60 text-right font-geist">(2023)</div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
+                            <div class="text-base text-white/80 font-geist">Retail Excellence Awards</div>
+                            <div class="text-base text-white/80 font-geist">Outstanding User Experience</div>
+                            <div class="text-base text-white/60 text-right font-geist">(2023)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="flex gap-2 text-white/40 max-w-7xl mt-6 mr-auto ml-auto items-center">
+        <span class="text-base font-geist">+</span>
+        <div class="h-px flex-1 bg-white/10"></div>
+        <span class="text-base font-geist">+</span>
+    </div>
+    <section class="sm:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
+        <div class="py-20 sm:py-28">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Left: Gear financing progress -->
+                <article class="sm:p-12 bg-black border-white/5 border rounded-3xl pt-8 pr-8 pb-8 pl-8 transition
+                    hover:bg-white/5 hover:border-white/10">
+                    <h3 class="text-3xl sm:text-4xl text-white tracking-tight font-geist font-medium" style="">Gear
+                        financing program</h3>
+
+                    <!-- KPIs -->
+                    <div class="mt-6 grid grid-cols-2 gap-6">
+                        <div class="">
+                            <p class="text-xs uppercase text-white/50 font-geist">Equipment Value</p>
+                            <p class="mt-1 text-2xl text-white tracking-tight font-geist font-medium" style="">$349,900
+                            </p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs uppercase text-white/50 font-geist">Financed</p>
+                            <p class="mt-1 text-2xl text-white tracking-tight font-geist font-medium" style="">$157,230
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="mt-8">
+                        <div class="relative h-2 w-full rounded-full bg-white/10">
+                            <div class="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-neutral-400
+                                via-neutral-300 to-neutral-200 shadow-[0_6px_20px_rgba(255,255,255,0.12)]
+                                transition-all" style="width: 45%;"></div>
+                            <!-- Soft cap tick -->
+                            <span class="absolute -top-1 h-4 w-0.5 bg-white/40 left-[30%]"></span>
+                            <!-- Hard cap tick -->
+                            <span class="absolute -top-1 h-4 w-0.5 bg-white/40 right-0"></span>
+                        </div>
+                        <div class="mt-3 flex items-center justify-between text-sm">
+                            <div class="flex items-center gap-2">
+                                <span class="text-white/50 uppercase font-geist">Goal 1</span>
+                                <span class="text-white/80 font-geist">$100,000</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-white/50 uppercase font-geist">Goal 2</span>
+                                <span class="text-white/80 font-geist">$350,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Countdown -->
+                    <div class="mt-10">
+                        <p class="text-base text-white/70 font-geist">Special financing ends in:</p>
+                        <p class="mt-4 text-5xl sm:text-7xl leading-none text-white tracking-tight font-geist
+                            font-medium" style="">07:14:32:18</p>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="mt-8">
+                        <button class="inline-flex gap-3 sm:h-14 sm:px-8 transition transform hover:scale-[1.02]
+                            hover:ring-2 hover:ring-white/20 text-white font-geist h-12 rounded-xl pr-6 pl-6 shadow-xl
+                            items-center" style="background: linear-gradient(135deg, #374151 0%, #4B5563 50%,
+                            #6B7280 100%); box-shadow: 0 12px 24px rgba(255, 255, 255, 0.12), inset 0 1px 0
+                            rgba(255,255,255,0.08);">
+                            <span class="inline-flex items-center justify-center h-8 w-8 rounded-full
+                                bg-white/20">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="credit-card" class="lucide lucide-credit-card w-[20px]
+                                    h-[20px]" data-icon-replaced="true" style="width: 20px; height:
+                                    20px; color: rgb(255, 255, 255);">
+                                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                    <line x1="2" x2="22" y1="10" y2="10"></line>
+                                </svg>
+                            </span>
+                            <span class="text-sm sm:text-base font-semibold tracking-tight font-geist">Apply
+                                for Financing</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Right: Financing information -->
+                <article class="rounded-3xl border border-white/5 bg-black p-8 sm:p-12">
+                    <h3 class="text-3xl sm:text-4xl text-white tracking-tight font-geist font-medium" style="">Financing
+                        details</h3>
+
+                    <div class="mt-6 border-t border-white/10 divide-y divide-white/10">
+                        <div class="grid grid-cols-2 gap-4 py-4">
+                            <span class="text-sm text-white/60 font-geist">Application deadline</span>
+                            <span class="text-sm text-right text-white/80 font-geist">March 15, 2025</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 py-4">
+                            <span class="text-sm text-white/60 font-geist">Program ends</span>
+                            <span class="text-sm text-right text-white/80 font-geist">December 31, 2025</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 py-4">
+                            <span class="text-sm text-white/60 font-geist">Available credit</span>
+                            <span class="text-sm text-right text-white/80 font-geist">$500,000</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 py-4">
+                            <span class="text-sm text-white/60 font-geist">Equipment allocated</span>
+                            <span class="text-sm text-right text-white/80 font-geist">$350,000</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 py-4">
+                            <span class="text-sm text-white/60 font-geist">Max financing</span>
+                            <span class="text-sm text-right text-white/80 font-geist">$100,000</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 py-4">
+                            <span class="text-sm text-white/60 font-geist">Min purchase</span>
+                            <span class="text-sm text-right text-white/80 font-geist">$5,000</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 py-4">
+                            <span class="text-sm text-white/60 font-geist">Interest rate</span>
+                            <span class="text-sm text-right text-white/80 font-geist">0% APR*</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 py-4">
+                            <span class="text-sm text-white/60 font-geist">Accepted brands</span>
+                            <span class="text-sm text-right font-geist"><span class="text-sky-400
+                                    font-geist">Canon, Sony, Nikon, Fuji</span></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="sm:px-8 max-w-full mr-auto ml-auto pt-16 pr-6 pb-12 pl-6">
+        <div class="relative">
+            <div class="text-sm text-white/40 font-geist">(Connect)</div>
+
+            <div class="text-center">
+                <h2 class="text-5xl sm:text-7xl lg:text-8xl leading-none text-white/90 tracking-tight uppercase
+                    font-geist font-medium" style="">JOIN THE</h2>
+                <h2 class="text-5xl sm:text-7xl lg:text-8xl leading-none text-white/90 tracking-tight uppercase
+                    mt-1 font-geist font-medium" style="">COMMUNITY</h2>
+
+                <div class="flex gap-2 text-white/40 mt-6 items-center">
+                    <span class="text-base font-geist">+</span>
+                    <div class="h-px flex-1 bg-white/10"></div>
+                    <span class="text-base font-geist">+</span>
+                </div>
+
+                <p class="mt-6 text-xl sm:text-2xl text-white/70 tracking-tight max-w-3xl mx-auto font-geist
+                    font-medium" style="">Professional camera gear for bold creators. Expert advice,
+                    premium equipment, and worldwide shipping.</p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/50 p-6">
+                    <div class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 ring-1
+                        ring-emerald-500/20 px-3 py-2 text-sm text-emerald-600 mb-4 font-geist">
+                        <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                        Newsletter
+                    </div>
+                    <h4 class="text-xl text-white tracking-tighter mb-4 font-geist">Stay updated</h4>
+                    <form class="space-y-3">
+                        <input type="email" required="" placeholder="you@domain.com" class="w-full h-10 px-4 rounded-xl border text-sm placeholder-white/40 outline-none
+                            focus:ring-2 focus:ring-white/20 focus:border-white/20 backdrop-blur border-white/20
+                            bg-white/10 text-white">
+                        <button class="w-full inline-flex items-center gap-2 h-10 px-4 rounded-xl ring-1 text-sm
+                            transition ring-white/20 text-white bg-white/10 hover:bg-white/20 justify-center
+                            font-geist">
+                            Join
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19
+                                    6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
+                                <path d="m21.854 2.147-10.94 10.939"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/50 p-6">
+                    <h5 class="text-sm uppercase tracking-wider font-medium mb-4 text-white/80 font-geist">
+                        Products</h5>
+                    <ul class="space-y-3 text-base text-white/70">
+                        <li class=""><a class="transition hover:text-white font-geist" href="#cameras">Cameras</a></li>
+                        <li><a class="transition hover:text-white font-geist" href="#lenses">Lenses</a></li>
+                        <li class=""><a class="transition hover:text-white font-geist"
+                                href="#accessories">Accessories</a></li>
+                        <li class=""><a class="transition hover:text-white font-geist" href="#lighting">Lighting</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/50 p-6">
+                    <h5 class="text-sm uppercase tracking-wider font-medium mb-4 text-white/80 font-geist">
+                        Support</h5>
+                    <ul class="space-y-3 text-base text-white/70">
+                        <li><a class="transition hover:text-white font-geist" href="#consultation">Expert Advice</a>
+                        </li>
+                        <li><a class="transition hover:text-white font-geist" href="#shipping">Shipping Info</a></li>
+                        <li><a class="transition hover:text-white font-geist" href="#returns">Returns</a></li>
+                        <li><a class="transition hover:text-white font-geist" href="#warranty">Warranty</a></li>
+                    </ul>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden border border-white/10 bg-black/50 p-6">
+                    <h5 class="text-sm uppercase tracking-wider font-medium mb-4 text-white/80 font-geist">
+                        Company</h5>
+                    <ul class="space-y-3 text-base text-white/70">
+                        <li><a class="transition hover:text-white font-geist" href="#about">About</a></li>
+                        <li><a class="transition hover:text-white font-geist" href="#careers">Careers</a></li>
+                        <li><a class="transition hover:text-white font-geist" href="#blog">Blog</a>
+                        </li>
+                        <li class=""><a class="transition hover:text-white font-geist" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between
+                gap-6">
+                <div class="flex items-center gap-6">
+                    <a href="#" class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+                            <img src="fixare.png" alt="FixAre Logo" class="w-full h-full object-contain">
+                        </div>
+                        <span
+                            class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">FixAre</span>
+                    </a>
+                    <div class="flex items-center gap-4 text-base text-white/60">
+                        <span class="font-geist">© FixAre Studio 2025</span>
+                        <span class="hidden sm:inline text-white/20 font-geist">|</span>
+                        <a href="#privacy" class="transition hover:text-white
+                            font-geist">Privacy</a>
+                        <span class="text-white/20 font-geist">/</span>
+                        <a href="#terms" class="transition hover:text-white font-geist">Terms</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a aria-label="Instagram" class="inline-flex h-10 w-10 items-center justify-center
+                        rounded-xl transition bg-white/5 text-white/70 hover:text-white hover:bg-white/10"
+                        href="https://instagram.com" target="_blank" rel="noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-5 h-5">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a aria-label="YouTube" class="inline-flex h-10 w-10 items-center justify-center
+                        rounded-xl transition bg-white/5 text-white/70 hover:text-white hover:bg-white/10"
+                        href="https://youtube.com" target="_blank" rel="noreferrer">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0
+                            24 24">
+                            <path d="M23.5 6.2a4 4 0 0 0-2.8-2.8C18.8 3 12 3 12 3s-6.8 0-8.7.4A4 4 0 0 0 .5 6.2C0
+                                8.1 0 12 0 12s0 3.9.5 5.8a4 4 0 0 0 2.8 2.8C5.2 21 12 21 12 21s6.8 0 8.7-.4a4 4 0 0 0
+                                2.8-2.8c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.5v-7L16 12z"></path>
+                        </svg>
+                    </a>
+                    <a aria-label="Twitter/X" class="inline-flex h-10 w-10 items-center justify-center
+                        rounded-xl transition bg-white/5 text-white/70 hover:text-white hover:bg-white/10"
+                        href="https://twitter.com" target="_blank" rel="noreferrer">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0
+                            16 16">
+                            <path d="M12.6 1.7h2.1l-4.6 5.2 5.4 7.4h-4.2L8.9 9.8l-3.9 4.5H2.9l4.9-5.6L2.6 1.7h4.3l3
+                                4.1 2.7-3.1z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+        <div id="cart-backdrop" class="absolute inset-0 opacity-0 transition-opacity bg-black/40">
+        </div>
+        <aside class="absolute right-0 top-0 h-full w-full sm:w-[420px] shadow-2xl border-l transform
+            translate-x-full transition-transform bg-black border-white/5">
+            <div class="flex h-full flex-col">
+                <header class="flex items-center justify-between px-6 h-16 border-b border-white/5">
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-5 h-5">
+                            <circle cx="8" cy="21" r="1"></circle>
+                            <circle cx="19" cy="21" r="1"></circle>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L20.75
+                                7H5.12"></path>
+                        </svg>
+                        <h3 class="text-base font-medium tracking-tight text-white font-geist" style="">Shopping cart
+                        </h3>
+                    </div>
+                    <button id="cart-close" class="inline-flex items-center justify-center h-10 w-10
+                        rounded-xl border transition border-white/5 bg-black text-white/70 hover:bg-white/5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </header>
+                <div id="cart-empty" class="flex-1 px-6 py-12 text-center text-white/60">
+                    <div class="mx-auto mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl
+                        bg-white/5 text-white/60">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6">
+                            <circle cx="8" cy="21" r="1"></circle>
+                            <circle cx="19" cy="21" r="1"></circle>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L20.75
+                                7H5.12"></path>
+                        </svg>
+                    </div>
+                    <p class="text-base font-geist" style="">Your cart is empty.</p>
+                </div>
+            </div>
+            <a href=" #" class="inline-flex items-center justify-center h-[100px] w-[150px] bg-center
+                        mix-blend-screen
+                        bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/eb918941-1db2-423a-ab9a-2881b35c08bc_320w.jpg)]
+                        bg-cover rounded"></a><a href="#" class="inline-flex items-center justify-center
+                        h-[100px] w-[150px] bg-center mix-blend-screen
+                        bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/b5b2de50-6ebb-43d6-a4a6-ecfe53a41b81_320w.jpg)]
+                        bg-cover rounded"></a><a href="#" class="inline-flex items-center justify-center
+                        h-[100px] w-[150px] bg-center mix-blend-screen
+                        bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/d9433c5e-003d-44cf-ac47-432b24fc3c49_320w.jpg)]
+                        bg-cover rounded"></a><a href="#" class="inline-flex items-center justify-center
+                        h-[100px] w-[150px] bg-center mix-blend-screen
+                        bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/0758808b-2344-4531-b769-f80e56a74ba7_320w.jpg)]
+                        bg-cover rounded"></a><a href="#" class="inline-flex items-center justify-center
+                        h-[100px] w-[150px] bg-center mix-blend-screen
+                        bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/0758808b-2344-4531-b769-f80e56a74ba7_320w.jpg)]
+                        bg-cover rounded"></a>
+            <script>
+                cartBackdrop.classList.remove('opacity-0');
+                cartDrawer.querySelector('aside').classList.remove('translate-x-full');
+
+                function closeCart() {
+                    cartBackdrop.classList.add('opacity-0');
+                    cartDrawer.querySelector('aside').classList.add('translate-x-full');
+                    setTimeout(() => {
+                        cartDrawer.classList.add('hidden');
+                    }, 300);
+                }
+
+                cartBtn?.addEventListener('click', openCart);
+                cartClose?.addEventListener('click', closeCart);
+                cartBackdrop?.addEventListener('click', closeCart);
+
+                // Add animations
+                const style = document.createElement('style');
+                style.textContent = `
+            @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
+            .animate-fade-in-delay-1 { animation: fadeIn 0.8s ease-out 0.2s both; }
+            .animate-fade-in-delay-2 { animation: fadeIn 0.8s ease-out 0.4s both; }
+            .animate-fade-in-delay-3 { animation: fadeIn 0.8s ease-out 0.6s both; }
+            .animate-fade-in-delay-4 { animation: fadeIn 0.8s ease-out 0.8s both; }
+            `;
+                document.head.appendChild(style);
+            </script>
+
 </body>
+
 </html>
